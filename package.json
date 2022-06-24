@@ -1,6 +1,7 @@
 {
   "name": "@goldy/natives",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "private": "false",
   "LICENSE": "MIT",
   "description": "Extending the native JavaScript API",
   "main": "lib/index.js",
@@ -25,9 +26,10 @@
     "build:watch": "nodemon --watch package.json --watch src --watch '@types' --exec \"npm run build\"",
     "build": "npm run build:ts && npm run build:types",
     "build:ts": "babel src -d lib --source-maps --extensions '.ts'",
-    "build:types": "cp -R @types lib",
+    "build:types": "cp index.d.ts lib/index.d.ts",
     "pub": "npm publish --access public",
-    "test": "jest --watch --runInBand"
+    "test": "jest --watch --runInBand",
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
@@ -62,6 +64,8 @@
     "babel-cli": "^7.0.0-beta.3",
     "babel-jest": "^27.5.1",
     "babel-plugin-inline-json-import": "^0.3.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -75,7 +79,13 @@
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.3",
     "ts-node": "^10.7.0",
     "typescript": "^4.7.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
