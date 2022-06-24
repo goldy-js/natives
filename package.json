@@ -1,7 +1,6 @@
 {
   "name": "@goldy/natives",
-  "version": "1.0.0",
-  "private": "false",
+  "version": "0.0.1",
   "LICENSE": "MIT",
   "description": "Extending the native JavaScript API",
   "main": "lib/index.js",
