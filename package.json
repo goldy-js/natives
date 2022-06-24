@@ -1,5 +1,5 @@
 {
-  "name": "@goldy/natives",
+  "name": "@goldyjs/natives",
   "version": "0.0.1",
   "LICENSE": "MIT",
   "description": "Extending the native JavaScript API",
