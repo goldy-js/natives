@@ -3,4 +3,7 @@
 ```js
 ;[1, 2, 3]._last()
 // 3
+
+;["key", "value"]._toH()
+// { key: "value" }
 ```
