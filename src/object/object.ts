@@ -11,3 +11,18 @@ Object.defineProperty(Object.prototype, "_stringify", {
     return JSON.stringify(this, null, spacing)
   },
 })
+
+Object.defineProperty(Object.prototype, "_compact", {
+  writable: false,
+  enumerable: false,
+  configurable: false,
+
+  value() {
+    return Object.entries(this).reduce((acc, [key, value]) => {
+      if (![null, undefined].includes(value)) {
+        acc[key] = value
+      }
+      return acc
+    }, {})
+  },
+})
