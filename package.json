@@ -27,7 +27,9 @@
     "build:ts": "babel src -d lib --source-maps --extensions '.ts'",
     "build:types": "cp index.d.ts lib/index.d.ts",
     "pub": "npm publish --access public",
-    "test": "jest --watch --runInBand",
+    "test": "jest --runInBand",
+    "t:w": "npm run test:w",
+    "test:w": "npm run test -- --watch",
     "semantic-release": "semantic-release"
   },
   "husky": {
