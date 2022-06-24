@@ -1,6 +1,6 @@
 {
   "name": "@goldyjs/natives",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "LICENSE": "MIT",
   "description": "Extending the native JavaScript API",
   "main": "lib/index.js",
